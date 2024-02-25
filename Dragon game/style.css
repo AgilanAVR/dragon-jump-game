@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box;
+    overflow: hidden;
+}
+.game-container{
+    background-image: url('bg.png');
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+.dino{
+    width:200px;
+    height:100px;
+position: absolute;
+bottom: 0px;
+left:5vw;
+}
+.dino img{
+    width:100%;
+}
+.score{
+    position:absolute;
+    right:50px
+}
+.game-over{
+    margin: auto;
+}
+.enemy{
+    width:150px;
+    height:100px;
+    position:absolute;
+    bottom: 0px;
+    left:50vw;
+    animation:enemyAnimation 4s linear infinite;
+}
+.enemy img{
+    width:100%;
+    
+}
+.animateDino{
+animation:dino .6s linear;
+}
+
+@keyframes dino {
+    0%{
+        bottom:0px;
+    }
+    50%{
+        bottom:290px;
+        left:100px;
+    }
+    100%{
+        bottom:0px;
+        left:300px;
+    }
+}
+
+@keyframes enemyAnimation {
+    0%{
+        left:100vw;
+    }
+    100%{
+        left:-10vw;
+    }
+}
+.game-over{
+    visibility: hidden;
+}
